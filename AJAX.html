@@ -37,8 +37,8 @@
       //POST
       var xhr = new XMLHttpRequest();
       var data = {
-        name: "zerocho",
-        birth: 1994
+        name: 'zerocho',
+        birth: 1994,
       };
       xhr.onload = function() {
         if (xhr.status === 200 || xhr.status === 201) {
@@ -47,8 +47,8 @@
           console.error(xhr.responseText);
         }
       };
-      xhr.open("POST", "https://www.zerocho.com/api/post/formdata");
-      xhr.setRequestHeader("Content-Type", "application/json"); // 컨텐츠타입을 json으로
+      xhr.open('POST', 'https://www.zerocho.com/api/post/formdata');
+      xhr.setRequestHeader('Content-Type', 'application/json'); // 컨텐츠타입을 json으로
       xhr.send(JSON.stringify(data)); // 데이터를 stringify해서 보냄
     </script>
   </body>

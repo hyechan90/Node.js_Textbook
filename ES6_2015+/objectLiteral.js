@@ -1,14 +1,14 @@
 var sayNode = function() {
-  console.log("Node");
+  console.log('Node');
 };
-var es = "ES";
+var es = 'ES';
 var oldObject = {
   sayJS: function() {
-    console.log("JS");
+    console.log('JS');
   },
-  sayNode: sayNode
+  sayNode: sayNode,
 };
-oldObject[es + 6] = "Fantastic";
+oldObject[es + 6] = 'Fantastic';
 oldObject.sayNode();
 oldObject.sayJS();
 console.log(oldObject.ES6);
@@ -17,10 +17,10 @@ console.log(`=============`);
 
 const newObject = {
   sayJS() {
-    console.log("JS");
+    console.log('JS');
   },
   sayNode,
-  [es + 6]: "Fantstic"
+  [es + 6]: 'Fantstic',
 };
 
 newObject.sayNode();

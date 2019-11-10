@@ -1,10 +1,10 @@
 function helloWorld() {
-	console.log('Hello World');
-	helloNode();
+  console.log('Hello World');
+  helloNode();
 }
 
 function helloNode() {
-	console.log('Hello Node');
+  console.log('Hello Node');
 }
 
 helloWorld();

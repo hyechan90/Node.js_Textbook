@@ -1,9 +1,9 @@
 const condition = true;
 const promise = new Promise((resolve, reject) => {
   if (condition) {
-    resolve("성공");
+    resolve('성공');
   } else {
-    reject("실패");
+    reject('실패');
   }
 });
 
@@ -26,7 +26,7 @@ promise
     console.error(error);
   });
 
-console.log("========");
+console.log('========');
 
 //나쁜 예시
 // function findAndSaveUser(Users) {
@@ -49,21 +49,21 @@ console.log("========");
 function findAndSaveUser(Users) {
   Users.find({})
     .then(user => {
-      user.name = "zero";
+      user.name = 'zero';
       return user.save();
     })
-    .then(user => {
-      return Users.findone({ gender: "m" });
+    .then(() => {
+      return Users.findone({ gender: 'm' });
     })
-    .then(user => {})
+    .then(() => {})
     .catch(err => {
       console.log(err);
     });
 }
 
 //Promise.all
-const promise1 = Promise.resolve("성공");
-const promise2 = Promise.resolve("성공");
+const promise1 = Promise.resolve('성공');
+const promise2 = Promise.resolve('성공');
 Promise.all([promise1, promise2])
   .then(result => {
     console.log(result);
